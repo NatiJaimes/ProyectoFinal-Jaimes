@@ -1,0 +1,34 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    font-family: Calibri;
+    background-color: blanchedalmond;
+    margin: -8px;
+    margin-bottom: 10px;
+}
+
+.noLinea {
+    text-decoration: none;
+}
+
+.ul {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    font-size: 19px;
+}
+
+.widget {
+    display: flex;
+}
+
+.widget h3 {
+    margin: 5px;
+    font-size: 22px;
+}
+
+.widgetLink {
+    text-decoration: none;
+}

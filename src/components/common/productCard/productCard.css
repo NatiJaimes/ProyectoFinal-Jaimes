@@ -1,0 +1,16 @@
+.producto {
+  width: 300px;
+  padding: 10px;
+  border: 1px dashed lightgrey;
+  margin: 10px;
+  text-align: center;
+}
+
+.fotoProducto {
+  height: 200px;
+}
+
+.producto p {
+  margin: 5px 0px;
+  font-size: 15px;
+}
