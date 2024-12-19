@@ -29,7 +29,11 @@ const ItemDetail = () => {
       <p>{product.description}</p>
       <p>Stock Disponible: {product.stock}</p>
       <p>$ {product.price}</p>
-      <Counter product={product} />
+      {product.stock > 0 ? (
+        <Counter product={product} />
+      ) : (
+        <h2>Producto sin stock</h2>
+      )}
     </div>
   );
 };

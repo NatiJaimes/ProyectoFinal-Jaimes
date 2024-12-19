@@ -17,7 +17,7 @@ En el home de la pagina se encuentra una lista de todos los items disponibles en
 
 En el detalle de los productos, tenemos acceso a la imagen del item junto a su nombre, un texto con más detalle sobre el mismo, el precio unitario y el stock disponible actualmente, que se actualiza conforme a la generación de nuevos documentos.
 
-En esta misma sección, se puede seleccionar la cantidad de materiales a solicitar con un limite acorde al stock actual del producto.
+En esta misma sección, se puede seleccionar la cantidad de materiales a solicitar con un limite acorde al stock actual del producto. Si el producto no tiene stock, se informará en pantalla y no se permitirá agregar el mismo al carrito.
 
 En la pagina del carrito de compras se podrá visualizar el detalle de los materiales elegidos. Este detalle incluye una miniatura de la imagen, el nombre del item, la cantidad solicitada y su precio unitario.
 
