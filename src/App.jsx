@@ -3,7 +3,7 @@ import Cart from './components/pages/cart/Cart';
 import Checkout from './components/pages/checkout/Checkout';
 import ItemDetail from "./components/pages/itemDetail/ItemDetail";
 import ItemListContainer from './components/pages/itemListContainer/ItemListContainer';
-import NavBar from './components/navBar/NavBar';
+import NavBar from './components/navbar/NavBar';
 import { CartContextProvider } from "./context/CartContext";
 import './App.css'
 
