@@ -1,20 +1,7 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
-//pasar los styles a archivo aparte
-const btnStyles = {
-  padding: "10px 40px",
-  backgroundColor: "steelblue",
-  fontSize: "1.5rem",
-  color: "white",
-  border: "none",
-  borderRadius: "8px",
-};
-const divStyles = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "20px",
-};
+import "./counter.css"
+
 const Counter = ({ product }) => {
   const { addToCart } = useContext(CartContext);
   const [count, setCount] = useState(1);
@@ -39,17 +26,17 @@ const Counter = ({ product }) => {
   };
 
   return (
-    <div style={{ ...divStyles, flexDirection: "column" }}>
-      <div style={divStyles}>
-        <button onClick={handleDecrement} style={btnStyles}>
+    <div className="contenedor">
+      <div className="div">
+        <button onClick={handleDecrement} className="btn">
           -
         </button>
         <h1>{count}</h1>
-        <button onClick={handleIncrement} style={btnStyles}>
+        <button onClick={handleIncrement} className="btn">
           +
         </button>
       </div>
-      <button style={btnStyles} onClick={onAdd}>
+      <button className="btn" onClick={onAdd}>
         Agregar al carrito
       </button>
     </div>

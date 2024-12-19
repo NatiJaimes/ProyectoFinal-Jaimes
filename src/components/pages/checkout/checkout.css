@@ -1,0 +1,39 @@
+.datForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.datForm h3 {
+    padding: 5px;
+}
+
+.datForm input {
+    width: 300px;
+}
+
+.btnCheck button {
+    margin: 5px;
+    background-color: blanchedalmond;
+    border: none;
+    border-radius: 6px;
+    color: purple;
+    font-size: 18px;
+    padding: 5px 15px;
+    margin: 0px 5px;
+    text-decoration: none;
+    font-family: Calibri;
+}
+
+.btnBack {
+    margin: 5px;
+    background-color: blanchedalmond;
+    border: none;
+    border-radius: 6px;
+    color: purple;
+    font-size: 18px;
+    padding: 5px 15px;
+    margin: 0px 5px;
+    text-decoration: none;
+    font-family: Calibri;
+}

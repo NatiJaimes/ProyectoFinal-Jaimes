@@ -1,0 +1,46 @@
+.detailCart {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.imgDetCart {
+    width: 15%;
+}
+
+.txtDetCart {
+    margin: 5px 15px;
+    text-align: left;
+    width: 60%;
+}
+
+.btnDetDel {
+    padding: 5px 10px;
+    background-color: blanchedalmond;
+    border: none;
+    border-radius: 6px;
+    color: purple;
+}
+
+.contCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.endCart {
+    text-align: center;
+}
+
+.btnCart {
+    background-color: blanchedalmond;
+    border: none;
+    border-radius: 6px;
+    color: purple;
+    font-size: 18px;
+    padding: 5px 15px;
+    margin: 0px 5px;
+    text-decoration: none;
+    font-family: Calibri;
+}

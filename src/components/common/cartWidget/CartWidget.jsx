@@ -4,13 +4,15 @@ import { CartContext } from "../../../context/CartContext";
 import '../../navbar/navBar.css'
 
 const CartWidget = () => {
-    const {cart} = useContext(CartContext);
+    const {cart, getTotalQuantity} = useContext(CartContext);
+
+    const totalItems = getTotalQuantity();
 
     return (
         <Link to="/cart" className="widgetLink">
             <div className="widget">
                 <h3>🛒</h3>
-                <span>{cart.length}</span>
+                <span>{totalItems}</span>
             </div>
         </Link>
     );

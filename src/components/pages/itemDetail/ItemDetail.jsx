@@ -4,6 +4,7 @@ import Counter from "../../common/counter/Counter";
 import { db } from "../../../firebaseConfig";
 import { collection, doc, getDoc } from "firebase/firestore";
 import './itemDetail.css'
+import { ScaleLoader } from "react-spinners";
 
 const ItemDetail = () => {
   const { id } = useParams();
@@ -16,6 +17,10 @@ const ItemDetail = () => {
     const getDocById = getDoc(refDoc);
     getDocById.then((res) => setProduct({ ...res.data(), id: res.id }));
   }, [id]);
+
+  if (!product.id){
+    return <ScaleLoader />
+  }
 
   return (
     <div>

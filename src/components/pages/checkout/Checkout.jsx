@@ -2,7 +2,8 @@ import { useState, useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { db } from "../../../firebaseConfig";
 import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
-import {  } from "react";
+import { Link } from "react-router-dom";
+import "./checkout.css"
 
 const Checkout = () => {
 
@@ -21,6 +22,10 @@ const Checkout = () => {
 
   const funcionDelFormulario = (e) => {
     e.preventDefault();
+    if (!userData.nombre || !userData.userEmail || !userData.telefono) { 
+        alert("Por favor, complete todos los campos."); 
+        return;
+      }
     let total = getTotalPrice()
     let order = {
       buyer: userData,
@@ -41,35 +46,31 @@ const Checkout = () => {
 
   return (
     <div>
-      <h2>Aca el formulario de compra</h2>
+      <h1>Formulario de Compra</h1>
       {orderId ? (
-        <h2>Gracias por tu compra. Tu ticket es: {orderId}</h2>
-      ) : (
+        <h2>Gracias por tu Compra. Tu número de ticket es: {orderId}</h2>
+        ) : (
         <form onSubmit={funcionDelFormulario}>
-          <input
-            type="text"
-            placeholder="nombre"
-            name="nombre"
-            onChange={capturarDatos}
-          />
-          <input
-            type="text"
-            placeholder="email"
-            name="userEmail"
-            onChange={capturarDatos}
-          />
-          <input
-            type="text"
-            placeholder="telefono"
-            name="telefono"
-            onChange={capturarDatos}
-          />
-          <button> enviar </button>
-          <button type="button"> cancelar </button>
+          <h2>Ingrese los siguientes datos:</h2>
+          <div className="datForm">
+            <h3>Nombre</h3>
+            <input type="text" placeholder="Ingrese su Nombre" name="nombre" onChange={capturarDatos} value={userData.nombre}/>
+          </div>
+          <div className="datForm">
+            <h3>Email</h3>
+            <input type="text" placeholder="Ingrese su email" name="userEmail" onChange={capturarDatos} value={userData.userEmail}/>
+          </div>
+          <div className="datForm">
+            <h3>Telefono</h3>
+            <input type="text" placeholder="Ingrese su telefono" name="telefono" onChange={capturarDatos} value={userData.telefono}/>
+          </div>
+          <div className="btnCheck">
+            <button type="submit"> Enviar </button>
+            <Link className="btnBack" to="/">Volver al Home</Link>
+          </div>
         </form>
       )}
     </div>
-    //agregar un boton que vuelva al home
   );
 };
 
